@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Practica B3</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary px-3">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 me-lg-3">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white-50" href="#">Link</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white-50" href="#" role="button" data-bs-toggle="dropdown">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Acción</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+        <span class="navbar-text text-white fw-bold">
+          +5555 55555
+        </span>
+      </div>
+    </div>
+  </nav>
+
+  <div id="carouselVistaUno" class="carousel slide" data-bs-ride="carousel">
+    
+    <div class="carousel-indicators mb-2">
+      <button type="button" data-bs-target="#carouselVistaUno" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselVistaUno" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselVistaUno" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      
+      <div class="carousel-item active bg-dark">
+        <img src="1.jpg" class="d-block w-100 opacity-25" alt="imagen_placeholder_carousel.jpg">
+        <div class="carousel-caption d-block pb-4 px-md-5">
+          <h3 class="fw-bold fs-4 text-white">Título Tres</h3>
+          <p class="small text-white m-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus deserunt, cumque aliquam nostrum ullam doloribus possimus provident. Aliquid, magni facere? Illo reiciendis dolorum dolore obcaecati consequuntur dicta eaque, velit magni.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item bg-dark">
+        <img src="2.jpg" class="d-block w-100 opacity-25" alt="imagen_placeholder_carousel.jpg">
+        <div class="carousel-caption d-block pb-4 px-md-5">
+          <h3 class="fw-bold fs-4 text-white">Título Dos</h3>
+          <p class="small text-white m-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus deserunt, cumque aliquam nostrum ullam doloribus possimus provident.
+          </p>
+        </div>
+      </div>
+
+      <div class="carousel-item bg-dark">
+        <img src="3.jpg" class="d-block w-100 opacity-25" alt="imagen_placeholder_carousel.jpg">
+        <div class="carousel-caption d-block pb-4 px-md-5">
+          <h3 class="fw-bold fs-4 text-white">Título Uno</h3>
+          <p class="small text-white m-0">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus deserunt, cumque aliquam nostrum ullam doloribus possimus provident. Aliquid, magni facere? Illo reiciendis dolorum dolore obcaecati consequuntur dicta eaque, velit magni.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselVistaUno" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselVistaUno" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+  </div>
+
+  <div class="container text-center my-5 px-lg-5">
+    <h2 class="display-6 text-dark mb-3">Lorem, ipsum dolor.</h2>
+    <p class="text-secondary small px-md-5">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quia consequatur, incidunt, odio nisi recusandae dolores voluptatibus neque a soluta quasi molestias? Nemo, optio. Ipsa ipsum explicabo debitis dicta corporis?
+    </p>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      
+      <div class="col">
+        <div class="card h-100 rounded-0 border">
+          <img src="1.jpg" class="card-img-top rounded-0 bg-secondary" alt="imagen_placeholder_card1.jpg">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-6">Card title</h5>
+            <p class="card-text small text-secondary">
+              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            </p>
+            <a href="#" class="btn btn-info text-white rounded-1">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-0 border">
+          <img src="2.jpg" class="card-img-top rounded-0 bg-secondary" alt="imagen_placeholder_card2.jpg">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-6">Card title</h5>
+            <p class="card-text small text-secondary">
+              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            </p>
+            <a href="#" class="btn btn-info text-white rounded-1">Más información</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100 rounded-0 border">
+          <img src="3.jpg" class="card-img-top rounded-0 bg-secondary" alt="imagen_placeholder_card3.jpg">
+          <div class="card-body">
+            <h5 class="card-title fw-bold fs-6">Card title</h5>
+            <p class="card-text small text-secondary">
+              This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+            </p>
+            <a href="#" class="btn btn-info text-white rounded-1">Más información</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="bg-body-tertiary p-5 mb-4 rounded-0 border-top">
+    <div class="container py-2">
+      <h1 class="display-5 text-secondary">Hello, world!</h1>
+      <p class="fs-6 text-secondary my-3">
+        This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
+      </p>
+      <hr class="my-4 text-secondary">
+      <p class="text-secondary mb-4">
+        It uses utility classes for typography and spacing to space content out within the larger container.
+      </p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </div>
+  </div>
+
+  <div class="container text-center my-5 px-lg-5">
+    <h2 class="display-6 text-dark mb-3">Lorem, ipsum dolor.</h2>
+    <p class="text-secondary small px-md-5">
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, quia consequatur, incidunt, odio nisi recusandae dolores voluptatibus neque a soluta quasi molestias? Nemo, optio. Ipsa ipsum explicabo debitis dicta corporis?
+    </p>
+  </div>
+
+  <div class="container mb-5">
+    <div class="row g-4">
+
+      <div class="col-md-7">
+        
+        <div class="mb-2">
+          <button class="btn btn-info text-white w-100 text-start rounded-0 py-2" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            Collapsible Group Item #1
+          </button>
+          <div id="collapseOne" class="collapse show border p-3 mt-1 text-secondary bg-white">
+            <small>
+              Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+            </small>
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <button class="btn btn-info text-white w-100 text-start rounded-0 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            Collapsible Group Item #2
+          </button>
+          <div id="collapseTwo" class="collapse border p-3 mt-1 text-secondary bg-white">
+            <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae aspernatur optio, iste obcaecati neque repellendus quae consequuntur cumque dolorem minus?</small>
+          </div>
+        </div>
+
+        <div class="mb-2">
+          <button class="btn btn-info text-white w-100 text-start rounded-0 py-2 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            Collapsible Group Item #3
+          </button>
+          <div id="collapseThree" class="collapse border p-3 mt-1 text-secondary bg-white">
+            <small>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestiae aspernatur optio, iste obcaecati neque repellendus quae consequuntur cumque dolorem minus?</small>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-md-5">
+        
+        <div class="mb-3 bg-secondary">
+          <img src="1.jpg" class="img-fluid w-100" alt="imagen_placeholder_derecha.jpg">
+        </div>
+
+        <ul class="list-group rounded-0">
+          <li class="list-group-item bg-info text-white border-info">Cras justo odio</li>
+          <li class="list-group-item text-secondary">Dapibus ac facilisis in</li>
+          <li class="list-group-item text-secondary">Morbi leo risus</li>
+          <li class="list-group-item text-secondary">Porta ac consectetur ac</li>
+          <li class="list-group-item text-secondary">Vestibulum at eros</li>
+        </ul>
+
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="bg-dark text-white-50 text-center py-4 mt-5">
+    <div class="container">
+      <p class="m-0 small px-md-5">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi non esse ab architecto. Recusandae maiores, voluptas accusamus veritatis beatae assumenda veniam fugit esse sed voluptate totam iure! Fuga, dolores quisquam.
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
