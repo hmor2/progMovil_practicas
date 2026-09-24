@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARCA - Diario online líder en información deportiva</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --marca-red: #cf0000;
+            --marca-blue-badge: #0056b3;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background-color: #fcfcfc;
+            color: #111;
+            font-size: 14px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        a:hover {
+            color: var(--marca-red);
+        }
+
+        .marca-logo-text {
+            font-weight: 900;
+            font-size: 2.3rem;
+            letter-spacing: -1px;
+            color: var(--marca-red);
+            line-height: 1;
+        }
+
+        .topbar-image {
+            width: 28px;
+            height: 28px;
+            flex: 0 0 28px;
+            object-fit: contain;
+        }
+
+        .marca-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 2px 6px;
+            border-radius: 2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .marca-badge-blue {
+            background-color: var(--marca-blue-badge);
+            color: #fff;
+        }
+
+        .nav-main-bg {
+            background-color: var(--marca-red);
+        }
+
+        .team-image {
+            width: 24px;
+            height: 24px;
+            flex: 0 0 24px;
+            object-fit: contain;
+        }
+
+        .banner-caliente {
+            width: fit-content;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .banner-caliente-link {
+            display: block;
+        }
+
+        .banner-caliente-image {
+            display: block;
+            max-height: 180px;
+            max-width: 100%;
+        }
+
+        .hero-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-card-img {
+            height: 380px;
+            width: 100%;
+            object-fit: cover;
+            opacity: 0.85;
+        }
+
+        .news-thumbnail {
+            width: 100%;
+            aspect-ratio: 4 / 3;
+            object-fit: cover;
+        }
+
+        .news-feature-image {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.95) 100%);
+            padding: 24px;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 1.85rem;
+            font-weight: 900;
+            line-height: 1.15;
+            color: #fff;
+        }
+
+        .news-card-title {
+            font-weight: 800;
+            font-size: 1.05rem;
+            line-height: 1.25;
+            color: #111;
+        }
+
+        .news-card-title:hover {
+            color: var(--marca-red);
+        }
+
+        .news-meta {
+            font-size: 0.725rem;
+            color: #6c757d;
+            font-weight: 600;
+        }
+
+        .social-circle {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background-color: #3b5998;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 3px;
+        }
+
+        .social-twitter { background-color: #1da1f2; }
+        .social-google { background-color: #dd4b39; }
+        .social-rss { background-color: #f26522; }
+
+    </style>
+</head>
+<body>
+
+    <div class="bg-white border-bottom py-1 text-secondary" style="font-size: 0.75rem;">
+        <div class="container-xl d-flex justify-content-between align-items-center flex-wrap">
+            <div class="d-flex align-items-center gap-3">
+                <a href="" class="d-inline-flex align-items-center gap-1 fw-bold text-dark">
+                    <img src="logos/portada_marca.jpg" alt="Logo de La portada de hoy" class="topbar-image">
+                    <span>La portada de hoy</span>
+                </a>
+                <span class="text-muted">|</span>
+                <a href="#" class="d-inline-flex align-items-center gap-1 fw-bold text-dark">
+                    <img src="logos/radio_logo.png" alt="Logo de Radio MARCA" class="topbar-image">
+                    <span>Radio MARCA</span>
+                </a>
+                <span class="text-muted">|</span>
+                <a href="#" class="d-inline-flex align-items-center gap-1 fw-bold text-dark">
+                    <img src="logos/fantasy_logo.jpg" alt="Logo de LaLiga Fantasy MARCA" class="topbar-image">
+                    <span>LaLiga Fantasy MARCA</span>
+                </a>
+                <div class="marca-logo-text ms-2">MARCA</div>
+            </div>
+            
+            <div class="d-flex align-items-center gap-3 mt-1 mt-md-0">
+                <div class="dropdown">
+                    <button class="btn btn-sm btn-outline-secondary py-0 px-2 dropdown-toggle" type="button" style="font-size: 0.725rem;">
+                        <i class="bi bi-globe me-1"></i> ES
+                    </button>
+                </div>
+                <button class="btn btn-danger btn-sm fw-bold px-3" style="font-size: 0.75rem; background-color: var(--marca-red);">
+                    Suscríbete
+                </button>
+                <a href="#" class="text-dark fw-semibold"><i class="bi bi-person-fill me-1"></i> Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg nav-main-bg p-0 shadow-sm sticky-top">
+        <div class="container-xl">
+            <button class="navbar-toggler text-white my-2 ms-2" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
+                <i class="bi bi-list fs-3"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link text-white fw-bold text-uppercase px-3 py-2 active" href="#">Fútbol</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold text-uppercase px-3 py-2" href="#">Baloncesto</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold text-uppercase px-3 py-2" href="#">Motor</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold text-uppercase px-3 py-2" href="#">Polideportivo</a></li>
+                    <li class="nav-item"><a class="nav-link text-white fw-bold text-uppercase px-3 py-2" href="#">Más +</a></li>
+                </ul>
+                
+                <form class="d-flex my-1 me-2" role="search">
+                    <div class="input-group input-group-sm">
+                        <input type="search" class="form-control rounded-start" placeholder="Buscar en marca.com" aria-label="Search">
+                        <button class="btn btn-dark" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-white border-bottom overflow-x-auto text-nowrap py-1">
+        <div class="container-xl d-flex align-items-center">
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/real_madrid.png" alt="Escudo del Real Madrid" class="team-image me-1"> Real Madrid</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/barcelona.png" alt="Escudo del FC Barcelona" class="team-image me-1"> FC Barcelona</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/atletico.png" alt="Escudo del Atlético de Madrid" class="team-image me-1"> Atlético</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/sevilla.png" alt="Escudo del Sevilla FC" class="team-image me-1"> Sevilla</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/betis.png" alt="Escudo del Real Betis" class="team-image me-1"> Betis</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 border-end small fw-semibold"><img src="logos/champions.png" alt="Logo de la Champions League" class="team-image me-1"> Champions League</div>
+            <div class="d-inline-flex align-items-center px-3 py-1 small text-danger fw-bold ms-auto"><img src="logos/marca_apuestas.jpg" alt="Logo de MARCAapuestas.es" class="team-image me-1"> MARCAapuestas.es</div>
+        </div>
+    </div>
+
+    <div class="container-xl my-3 d-flex justify-content-center">
+        <div class="banner-caliente shadow-sm">
+            <a href="#" class="banner-caliente-link" aria-label="Banner publicitario de Caliente">
+                <img src="imagenes/caliente.gif" alt="Banner publicitario de Caliente" class="banner-caliente-image">
+            </a>
+        </div>
+    </div>
+
+    <div class="container-xl mb-3">
+        <div class="bg-white border rounded-1 p-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <div class="d-flex align-items-center gap-2 flex-wrap">
+                <span class="fw-bold text-uppercase me-2 text-dark"><i class="bi bi-calendar-event me-1"></i> Agenda</span>
+                <span class="badge bg-danger text-uppercase px-2 py-1"><i class="bi bi-broadcast me-1"></i> En directo</span>
+                <a href="#" class="btn btn-sm btn-light border py-0 px-2 font-small">Todas las noticias / Última hora</a>
+                <a href="#" class="btn btn-sm btn-light border py-0 px-2 font-small">Lo mejor del día</a>
+            </div>
+            <div class="d-flex align-items-center gap-2">
+                <span class="badge bg-secondary text-white py-1 px-2">Jueves 23</span>
+                <a href="#" class="text-danger fw-bold small">Ver más directos <i class="bi bi-chevron-down"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <section class="container-xl mb-4">
+        <div class="row g-3">
+            <div class="col-lg-8">
+                <div class="hero-card shadow">
+                    <img src="imagenes/hero_champions.jpg" alt="Los ocho candidatos de la Champions League" class="hero-card-img">
+                    
+                    <div class="hero-overlay">
+                        <span class="marca-badge marca-badge-blue mb-2 d-inline-block">CHAMPIONS</span>
+                        <h1 class="hero-title mb-2">¿Cuál es el mejor once para reinar en Europa?</h1>
+                        <p class="text-light mb-2 d-none d-md-block fs-6">Descubre a los ocho grandes favoritos para levantar la copa de campeones esta temporada.</p>
+                        
+                        <div class="d-flex justify-content-between align-items-center news-meta text-light opacity-75 mt-2">
+                            <span><i class="bi bi-person me-1"></i> RUBÉN JIMÉNEZ / ENRIQUE MEDINA</span>
+                            <span class="badge bg-light text-dark"><i class="bi bi-chat-fill me-1 text-danger"></i> 468</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="d-flex flex-column gap-3 h-100">
+                    
+                    <div class="card border-0 shadow-sm p-2 bg-white flex-fill">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-8">
+                                <span class="marca-badge marca-badge-blue mb-1 d-inline-block">LALIGA SANTANDER</span>
+                                <h2 class="news-card-title mb-1 fs-6">Amenaza de huelga</h2>
+                                <div class="news-meta d-flex justify-content-between align-items-center mt-2">
+                                    <span>A. MOGOLLO Y E. BORDA</span>
+                                    <span><i class="bi bi-chat-fill text-muted me-1"></i>336</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="imagenes/huelga.jpg" alt="Amenaza de huelga" class="news-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm p-2 bg-white flex-fill">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-8">
+                                <span class="marca-badge marca-badge-blue mb-1 d-inline-block">FICHAJES</span>
+                                <h2 class="news-card-title mb-1 fs-6">Mercado: el 'recambio' de Filipe Luis puede llegar de Alemania</h2>
+                                <div class="news-meta d-flex justify-content-between align-items-center mt-2">
+                                    <span>REDACCIÓN</span>
+                                    <span><i class="bi bi-chat-fill text-muted me-1"></i>92</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="imagenes/fichajes.jpg" alt="Mercado de fichajes" class="news-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm p-2 bg-white flex-fill">
+                        <div class="row g-2 align-items-center">
+                            <div class="col-8">
+                                <span class="marca-badge marca-badge-blue mb-1 d-inline-block">REAL MADRID</span>
+                                <h2 class="news-card-title mb-1 fs-6">Champions y Liga para el portero titular</h2>
+                                <div class="news-meta d-flex justify-content-between align-items-center mt-2">
+                                    <span>JOSÉ FÉLIX DÍAZ</span>
+                                    <span><i class="bi bi-chat-fill text-muted me-1"></i>236</span>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <img src="imagenes/noticia_realM.jpg" alt="Noticia del Real Madrid" class="news-thumbnail">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="container-xl mb-4">
+        <div class="row g-3">
+            
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="imagenes/celebracion.jpg" alt="Felix Orode" class="news-feature-image">
+                    <div class="card-body p-3">
+                        <span class="marca-badge marca-badge-blue mb-2 d-inline-block">FÚTBOL</span>
+                        <h3 class="news-card-title fs-5 mb-2">Felix Orode, el jugador nigeriano que explica el festejo de Dele Alli</h3>
+                        <div class="news-meta">REDACCIÓN MARCA CLARO</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="imagenes/cristiano.jpg" alt="Cristiano Ronaldo" class="news-feature-image">
+                    <div class="card-body p-3">
+                        <span class="marca-badge marca-badge-blue mb-2 d-inline-block">SERIE A</span>
+                        <h3 class="news-card-title fs-5 mb-2">Cristiano habla sobre Cuadrado y la cesión del número 7</h3>
+                        <div class="news-meta">REDACCIÓN MARCA CLARO</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <img src="imagenes/cruz_azul.jpg" alt="Cruz Azul" class="news-feature-image">
+                    <div class="card-body p-3">
+                        <span class="marca-badge marca-badge-blue mb-2 d-inline-block">MÉXICO</span>
+                        <h3 class="news-card-title fs-5 mb-2">La joya celeste que hace soñar a Cruz Azul</h3>
+                        <div class="news-meta">JAVIER CARDOSO</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="container-xl mb-4">
+        <div class="bg-light border-top border-bottom small p-2 rounded d-flex align-items-center flex-wrap gap-1">
+            <span class="fw-bold me-2 text-dark" style="font-size: 0.85rem;"><i class="bi bi-lightning-charge-fill text-danger me-1"></i>Es noticia:</span>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Mercado de fichajes</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Rodrigo</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Fernando Alonso</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Lewandowski</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Usain Bolt</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Donald Trump</a>
+            <a href="#" class="badge rounded-pill bg-white border text-secondary px-2 py-1">Calendario Liga</a>
+        </div>
+    </div>
+
+    <section class="container-xl mb-5">
+        <div class="row g-4">
+            
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-3 h-100">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-5">
+                            <img src="imagenes/reunion_afe.jpg" alt="Reunión de la AFE" class="news-thumbnail">
+                        </div>
+                        <div class="col-7">
+                            <span class="marca-badge marca-badge-blue mb-1 d-inline-block">LALIGA SANTANDER</span>
+                            <h4 class="news-card-title fs-6 mb-2">¿Qué equipos y qué jugadores estuvieron en la reunión de la AFE?</h4>
+                            <div class="news-meta"><i class="bi bi-chat-fill me-1 text-muted"></i> 14 comentarios</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-3 h-100">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-5">
+                            <img src="imagenes/sevilla.jpg" alt="Draxler y Martial" class="news-thumbnail">
+                        </div>
+                        <div class="col-7">
+                            <span class="marca-badge marca-badge-blue mb-1 d-inline-block">SEVILLA FC</span>
+                            <h4 class="news-card-title fs-6 mb-2">Draxler y Martial, nombres 'top' en la recta final del mercado</h4>
+                            <div class="news-meta">ROCÍO GUEVARA | SEVILLA <span class="ms-2"><i class="bi bi-chat-fill me-1 text-muted"></i> 64</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-3 h-100">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-5">
+                            <img src="imagenes/lunin.jpg" alt="Lunin y el Leganés" class="news-thumbnail">
+                        </div>
+                        <div class="col-7">
+                            <span class="marca-badge marca-badge-blue mb-1 d-inline-block">REAL MADRID</span>
+                            <h4 class="news-card-title fs-6 mb-2">Lunin, muy cerca de irse cedido al Leganés</h4>
+                            <div class="news-meta">REDACCIÓN MARCA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm p-3 h-100">
+                    <div class="row g-3 align-items-center">
+                        <div class="col-5">
+                            <img src="imagenes/rodrigo.jpg" alt="Rodrigo" class="news-thumbnail">
+                        </div>
+                        <div class="col-7">
+                            <span class="marca-badge marca-badge-blue mb-1 d-inline-block">REAL MADRID</span>
+                            <h4 class="news-card-title fs-6 mb-2">Algo pasa con Rodrigo</h4>
+                            <div class="news-meta">REDACCIÓN MARCA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="bg-dark text-secondary small pt-5 pb-4">
+        <div class="container-xl">
+            <h5 class="text-white fw-bold mb-4 border-bottom border-secondary pb-2">Otras webs de Unidad Editorial</h5>
+            
+            <div class="row g-4">
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white fw-bold text-uppercase small border-bottom border-secondary pb-2 mb-3">Marca</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">App Marca</a></li>
+                        <li><a href="#">Apuestas Deportivas</a></li>
+                        <li><a href="#">Clasificación LaLiga</a></li>
+                        <li><a href="#">Calendario LaLiga</a></li>
+                        <li><a href="#">Hemeroteca Marca</a></li>
+                        <li><a href="#">Marca eSports</a></li>
+                        <li><a href="#">Marca Madrid</a></li>
+                        <li><a href="#">Marca en Orbyt</a></li>
+                        <li><a href="#">Zona Marca</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white fw-bold text-uppercase small border-bottom border-secondary pb-2 mb-3">Ocio y Moda</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Tiramillas</a></li>
+                        <li><a href="#">Moda - Telva</a></li>
+                        <li><a href="#">BUHO Magazine</a></li>
+                        <li><a href="#">Traductor</a></li>
+                        <li><a href="#">Programación TV</a></li>
+                        <li><a href="#">Marca Entradas</a></li>
+                        <li><a href="#">Mi bebé y yo</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white fw-bold text-uppercase small border-bottom border-secondary pb-2 mb-3">Unidad Editorial</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">El Mundo</a></li>
+                        <li><a href="#">Expansión</a></li>
+                        <li><a href="#">CuídatePlus</a></li>
+                        <li><a href="#">Diario Médico</a></li>
+                        <li><a href="#">Correo Farmacéutico</a></li>
+                        <li><a href="#">Suscripción Marca</a></li>
+                        <li><a href="#">Suscripción El Mundo</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3">
+                    <h6 class="text-white fw-bold text-uppercase small border-bottom border-secondary pb-2 mb-3">Formación y Empleo</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#">Escuela Unidad Editorial</a></li>
+                        <li><a href="#">Unidad Editorial</a></li>
+                        <li><a href="#">Expansión y Empleo</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="bg-body-secondary text-secondary small py-4 border-top">
+        <div class="container-xl text-center">
+            <p class="mb-2 text-muted fw-semibold">
+                © 2026 Unidad Editorial Información Deportiva, S.L.U. Todos los derechos reservados.
+            </p>
+            
+            <div class="d-flex justify-content-center flex-wrap gap-2 mb-3 text-secondary">
+                <a href="#" class="text-secondary">Términos y condiciones de uso</a> |
+                <a href="#" class="text-secondary">Política de privacidad</a> |
+                <a href="#" class="text-secondary">Política de cookies</a> |
+                <a href="#" class="text-secondary">Certificado por OJD</a> |
+                <a href="#" class="text-secondary">Contacto</a> |
+                <a href="#" class="text-secondary">Publicidad</a> |
+                <a href="#" class="text-secondary">Ayuda</a> |
+                <a href="#" class="text-secondary">Nuestro equipo</a> |
+                <a href="#" class="text-secondary">Venta de contenidos</a>
+            </div>
+
+            <div class="d-flex justify-content-center align-items-center gap-2 mt-3">
+                <span class="small fw-bold text-muted me-2">Síguenos en:</span>
+                <a href="#" class="social-circle"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="social-circle social-twitter"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="social-circle social-google"><i class="bi bi-google"></i></a>
+                <a href="#" class="social-circle social-rss"><i class="bi bi-rss-fill"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
